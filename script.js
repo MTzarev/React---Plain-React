@@ -1,19 +1,36 @@
-let rootElement = document.getElementById('root');
+var rootElement = document.getElementById('root');
 
-let reactElement = (
-    <div>
-        <header>
-            <h1>Hello JSX Modified!</h1>
-            <h2>The best freamwork in the world!</h2>
-
-            <p> New Text Area: Here </p>
-
-            <button>Clich me!</button>
-            
-        </header>
-
-        <footer> All rights reserverd &copy; </footer>
-    </div>
-
+var reactElement = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'header',
+        null,
+        React.createElement(
+            'h1',
+            null,
+            'Hello JSX Modified!'
+        ),
+        React.createElement(
+            'h2',
+            null,
+            'The best freamwork in the world!'
+        ),
+        React.createElement(
+            'p',
+            null,
+            ' New Text Area: Here '
+        ),
+        React.createElement(
+            'button',
+            null,
+            'Clich me!'
+        )
+    ),
+    React.createElement(
+        'footer',
+        null,
+        ' All rights reserverd \xA9 '
+    )
 );
-ReactDOM.render(reactElement, rootElement)
+ReactDOM.render(reactElement, rootElement);
